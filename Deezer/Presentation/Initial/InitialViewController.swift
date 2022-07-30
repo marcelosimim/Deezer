@@ -24,6 +24,7 @@ class InitialViewController: UIViewController {
 
     private func setupButtons() {
         initialView.loginButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
+        initialView.registerButton.addTarget(self, action: #selector(registerPressed), for: .touchUpInside)
     }
 }
 
@@ -34,5 +35,9 @@ extension InitialViewController: Navigation {
     
     @objc private func loginPressed() {
         navigationController?.pushViewController(LoginViewController.init(), animated: true)
+    }
+
+    @objc private func registerPressed() {
+        navigationController?.pushViewController(RegisterViewController.init(), animated: true)
     }
 }
