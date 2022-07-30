@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */; };
 		A3C5716F2895B00F00BFEB17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */; };
-		A3C571712895B00F00BFEB17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571702895B00F00BFEB17 /* ViewController.swift */; };
-		A3C571742895B00F00BFEB17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C571722895B00F00BFEB17 /* Main.storyboard */; };
 		A3C571762895B01100BFEB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C571752895B01100BFEB17 /* Assets.xcassets */; };
 		A3C571792895B01100BFEB17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C571772895B01100BFEB17 /* LaunchScreen.storyboard */; };
 		A3C571842895B01100BFEB17 /* DeezerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571832895B01100BFEB17 /* DeezerTests.swift */; };
 		A3C5718E2895B01100BFEB17 /* DeezerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5718D2895B01100BFEB17 /* DeezerUITests.swift */; };
 		A3C571902895B01100BFEB17 /* DeezerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5718F2895B01100BFEB17 /* DeezerUITestsLaunchTests.swift */; };
+		A3C571A12895B12D00BFEB17 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571A02895B12D00BFEB17 /* InitialViewController.swift */; };
+		A3C571A62895B42200BFEB17 /* UIColor+Deezer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571A52895B42200BFEB17 /* UIColor+Deezer.swift */; };
+		A3C571AA2895B4AB00BFEB17 /* GenerateUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571A92895B4AB00BFEB17 /* GenerateUIColor.swift */; };
+		A3C571AD2895B4EC00BFEB17 /* UIImage+Deezer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571AC2895B4EC00BFEB17 /* UIImage+Deezer.swift */; };
+		A3C571AF2895B51A00BFEB17 /* GenerateUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571AE2895B51A00BFEB17 /* GenerateUIImage.swift */; };
+		A3C571B12895B56900BFEB17 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571B02895B56900BFEB17 /* InitialView.swift */; };
+		A3C571B42895B65700BFEB17 /* Stylable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571B32895B65700BFEB17 /* Stylable.swift */; };
+		A3C571B72895B6AA00BFEB17 /* UIView+Deezer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571B62895B6AA00BFEB17 /* UIView+Deezer.swift */; };
+		A3C571B92895B7AF00BFEB17 /* Dimen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571B82895B7AF00BFEB17 /* Dimen.swift */; };
+		A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571BC2895B9E500BFEB17 /* PrimaryButton.swift */; };
+		A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571BE2895BCD800BFEB17 /* SecondaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +48,6 @@
 		A3C571692895B00F00BFEB17 /* Deezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A3C571702895B00F00BFEB17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A3C571732895B00F00BFEB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3C571752895B01100BFEB17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3C571782895B01100BFEB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3C5717A2895B01100BFEB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,17 @@
 		A3C571892895B01100BFEB17 /* DeezerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5718D2895B01100BFEB17 /* DeezerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerUITests.swift; sourceTree = "<group>"; };
 		A3C5718F2895B01100BFEB17 /* DeezerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A3C571A02895B12D00BFEB17 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		A3C571A52895B42200BFEB17 /* UIColor+Deezer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Deezer.swift"; sourceTree = "<group>"; };
+		A3C571A92895B4AB00BFEB17 /* GenerateUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateUIColor.swift; sourceTree = "<group>"; };
+		A3C571AC2895B4EC00BFEB17 /* UIImage+Deezer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Deezer.swift"; sourceTree = "<group>"; };
+		A3C571AE2895B51A00BFEB17 /* GenerateUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateUIImage.swift; sourceTree = "<group>"; };
+		A3C571B02895B56900BFEB17 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		A3C571B32895B65700BFEB17 /* Stylable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stylable.swift; sourceTree = "<group>"; };
+		A3C571B62895B6AA00BFEB17 /* UIView+Deezer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Deezer.swift"; sourceTree = "<group>"; };
+		A3C571B82895B7AF00BFEB17 /* Dimen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimen.swift; sourceTree = "<group>"; };
+		A3C571BC2895B9E500BFEB17 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		A3C571BE2895BCD800BFEB17 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +117,11 @@
 		A3C5716B2895B00F00BFEB17 /* Deezer */ = {
 			isa = PBXGroup;
 			children = (
-				A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */,
-				A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */,
-				A3C571702895B00F00BFEB17 /* ViewController.swift */,
-				A3C571722895B00F00BFEB17 /* Main.storyboard */,
-				A3C571752895B01100BFEB17 /* Assets.xcassets */,
-				A3C571772895B01100BFEB17 /* LaunchScreen.storyboard */,
 				A3C5717A2895B01100BFEB17 /* Info.plist */,
+				A3C5719F2895B0D000BFEB17 /* Application */,
+				A3C5719D2895B08700BFEB17 /* Presentation */,
+				A3C571A22895B1A200BFEB17 /* Resources */,
+				A3C571A32895B3EF00BFEB17 /* Supporting Files */,
 			);
 			path = Deezer;
 			sourceTree = "<group>";
@@ -125,6 +141,113 @@
 				A3C5718F2895B01100BFEB17 /* DeezerUITestsLaunchTests.swift */,
 			);
 			path = DeezerUITests;
+			sourceTree = "<group>";
+		};
+		A3C5719D2895B08700BFEB17 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5719E2895B08D00BFEB17 /* Initial */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A3C5719E2895B08D00BFEB17 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571A02895B12D00BFEB17 /* InitialViewController.swift */,
+				A3C571B02895B56900BFEB17 /* InitialView.swift */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		A3C5719F2895B0D000BFEB17 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */,
+				A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A3C571A22895B1A200BFEB17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571BA2895B95400BFEB17 /* Components */,
+				A3C571752895B01100BFEB17 /* Assets.xcassets */,
+				A3C571772895B01100BFEB17 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A3C571A32895B3EF00BFEB17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571B22895B64A00BFEB17 /* Protocols */,
+				A3C571A42895B40500BFEB17 /* Extentions */,
+				A3C571B82895B7AF00BFEB17 /* Dimen.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3C571A42895B40500BFEB17 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571B52895B69F00BFEB17 /* UIView */,
+				A3C571AB2895B4DE00BFEB17 /* UIImage */,
+				A3C571A72895B45B00BFEB17 /* UIColor */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		A3C571A72895B45B00BFEB17 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571A52895B42200BFEB17 /* UIColor+Deezer.swift */,
+				A3C571A92895B4AB00BFEB17 /* GenerateUIColor.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		A3C571AB2895B4DE00BFEB17 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571AC2895B4EC00BFEB17 /* UIImage+Deezer.swift */,
+				A3C571AE2895B51A00BFEB17 /* GenerateUIImage.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		A3C571B22895B64A00BFEB17 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571B32895B65700BFEB17 /* Stylable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A3C571B52895B69F00BFEB17 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571B62895B6AA00BFEB17 /* UIView+Deezer.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		A3C571BA2895B95400BFEB17 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571BB2895B96400BFEB17 /* Buttons */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A3C571BB2895B96400BFEB17 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571BC2895B9E500BFEB17 /* PrimaryButton.swift */,
+				A3C571BE2895BCD800BFEB17 /* SecondaryButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +356,6 @@
 			files = (
 				A3C571792895B01100BFEB17 /* LaunchScreen.storyboard in Resources */,
 				A3C571762895B01100BFEB17 /* Assets.xcassets in Resources */,
-				A3C571742895B00F00BFEB17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +380,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3C571712895B00F00BFEB17 /* ViewController.swift in Sources */,
+				A3C571B42895B65700BFEB17 /* Stylable.swift in Sources */,
+				A3C571A12895B12D00BFEB17 /* InitialViewController.swift in Sources */,
+				A3C571B12895B56900BFEB17 /* InitialView.swift in Sources */,
 				A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */,
+				A3C571AD2895B4EC00BFEB17 /* UIImage+Deezer.swift in Sources */,
+				A3C571AA2895B4AB00BFEB17 /* GenerateUIColor.swift in Sources */,
+				A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */,
+				A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */,
+				A3C571A62895B42200BFEB17 /* UIColor+Deezer.swift in Sources */,
+				A3C571AF2895B51A00BFEB17 /* GenerateUIImage.swift in Sources */,
+				A3C571B92895B7AF00BFEB17 /* Dimen.swift in Sources */,
 				A3C5716F2895B00F00BFEB17 /* SceneDelegate.swift in Sources */,
+				A3C571B72895B6AA00BFEB17 /* UIView+Deezer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +429,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A3C571722895B00F00BFEB17 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A3C571732895B00F00BFEB17 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A3C571772895B01100BFEB17 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +568,6 @@
 				INFOPLIST_FILE = Deezer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +595,6 @@
 				INFOPLIST_FILE = Deezer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
