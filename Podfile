@@ -6,8 +6,10 @@ target 'Deezer' do
   use_frameworks!
 
   # Pods for Deezer
-pod 'FirebaseAuth'
-pod 'FirebaseFirestore'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  pod 'Swinject'
+
   target 'DeezerTests' do
     inherit! :search_paths
     # Pods for testing
