@@ -9,7 +9,11 @@ import UIKit
 
 class InitialView: UIView {
 
-    private let mainImage = UIImageView()
+    private let mainImage: UIImageView = {
+        let image = UIImageView()
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
     private let mainTitle = UILabel()
     let loginButton = PrimaryButton()
     let registerButton = SecondaryButton()
@@ -27,6 +31,7 @@ class InitialView: UIView {
     private func setupConstraits() {
         mainImage.topToTop(of: self, margin: 164*Dimen.heightMultiplier)
         mainImage.centerHorizontal(to: self)
+        mainImage.heightTo(250*Dimen.heightMultiplier)
 
         mainTitle.topToBottom(of: mainImage, margin: 62*Dimen.heightMultiplier)
         mainTitle.centerHorizontal(to: self)
