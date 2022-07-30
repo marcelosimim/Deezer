@@ -11,4 +11,7 @@ extension UIImage {
     public static var mello: UIImage {
         imageBuilder("mello")
     }
+    public static var happyMusic: UIImage {
+        imageBuilder("happy_music")
+    }
 }
