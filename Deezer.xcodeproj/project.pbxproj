@@ -18,6 +18,8 @@
 		A37C360D2895DD9500F188BA /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C360C2895DD9500F188BA /* RegisterUseCase.swift */; };
 		A37C360F2895DDA800F188BA /* DefaultRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C360E2895DDA800F188BA /* DefaultRegisterUseCase.swift */; };
 		A37C36122895DE0B00F188BA /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36112895DE0B00F188BA /* DI.swift */; };
+		A37C36142895DE8F00F188BA /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36132895DE8F00F188BA /* RegisterViewModel.swift */; };
+		A37C36172895DEC200F188BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36162895DEC200F188BA /* User.swift */; };
 		A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */; };
 		A3C5716F2895B00F00BFEB17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */; };
 		A3C571762895B01100BFEB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C571752895B01100BFEB17 /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 		A37C360C2895DD9500F188BA /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		A37C360E2895DDA800F188BA /* DefaultRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRegisterUseCase.swift; sourceTree = "<group>"; };
 		A37C36112895DE0B00F188BA /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
+		A37C36132895DE8F00F188BA /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		A37C36162895DEC200F188BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A3C571692895B00F00BFEB17 /* Deezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +241,14 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		A37C36152895DEB300F188BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A37C36162895DEC200F188BA /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A3C571602895B00F00BFEB17 = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +307,7 @@
 		A3C5719D2895B08700BFEB17 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A37C36152895DEB300F188BA /* Model */,
 				A3C571CA2895D17100BFEB17 /* Register */,
 				A3C571C02895BFED00BFEB17 /* Login */,
 				A3C5719E2895B08D00BFEB17 /* Initial */,
@@ -425,6 +438,7 @@
 			children = (
 				A3C571CB2895D18300BFEB17 /* RegisterViewController.swift */,
 				A3C571CD2895D19F00BFEB17 /* RegisterView.swift */,
+				A37C36132895DE8F00F188BA /* RegisterViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -686,6 +700,7 @@
 				A37C36062895DC9400F188BA /* DefaultFirebaseAuthRepository.swift in Sources */,
 				A3C571C42895C03000BFEB17 /* LoginView.swift in Sources */,
 				A3C571B12895B56900BFEB17 /* InitialView.swift in Sources */,
+				A37C36172895DEC200F188BA /* User.swift in Sources */,
 				A37C36092895DCE700F188BA /* UserEntity.swift in Sources */,
 				A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */,
 				A3C571AD2895B4EC00BFEB17 /* UIImage+Deezer.swift in Sources */,
@@ -701,6 +716,7 @@
 				A37C36122895DE0B00F188BA /* DI.swift in Sources */,
 				A3C571C92895CB2900BFEB17 /* InputTextField.swift in Sources */,
 				A3C571C62895C38500BFEB17 /* Navigation.swift in Sources */,
+				A37C36142895DE8F00F188BA /* RegisterViewModel.swift in Sources */,
 				A3C571AF2895B51A00BFEB17 /* GenerateUIImage.swift in Sources */,
 				A3C571B92895B7AF00BFEB17 /* Dimen.swift in Sources */,
 				A3C5716F2895B00F00BFEB17 /* SceneDelegate.swift in Sources */,

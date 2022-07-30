@@ -10,6 +10,7 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     private let registerView = RegisterView.init()
+    private let registerViewModel = AppContainer.shared.resolve(RegisterViewModel.self)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
