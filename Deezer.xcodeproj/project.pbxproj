@@ -29,6 +29,8 @@
 		A3C571C42895C03000BFEB17 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571C32895C03000BFEB17 /* LoginView.swift */; };
 		A3C571C62895C38500BFEB17 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571C52895C38500BFEB17 /* Navigation.swift */; };
 		A3C571C92895CB2900BFEB17 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571C82895CB2900BFEB17 /* InputTextField.swift */; };
+		A3C571CC2895D18300BFEB17 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571CB2895D18300BFEB17 /* RegisterViewController.swift */; };
+		A3C571CE2895D19F00BFEB17 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571CD2895D19F00BFEB17 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		A3C571C32895C03000BFEB17 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A3C571C52895C38500BFEB17 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		A3C571C82895CB2900BFEB17 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		A3C571CB2895D18300BFEB17 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A3C571CD2895D19F00BFEB17 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 		A3C5719D2895B08700BFEB17 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A3C571CA2895D17100BFEB17 /* Register */,
 				A3C571C02895BFED00BFEB17 /* Login */,
 				A3C5719E2895B08D00BFEB17 /* Initial */,
 			);
@@ -276,6 +281,15 @@
 				A3C571C82895CB2900BFEB17 /* InputTextField.swift */,
 			);
 			path = Textfield;
+			sourceTree = "<group>";
+		};
+		A3C571CA2895D17100BFEB17 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571CB2895D18300BFEB17 /* RegisterViewController.swift */,
+				A3C571CD2895D19F00BFEB17 /* RegisterView.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,7 +430,9 @@
 				A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */,
 				A3C571AD2895B4EC00BFEB17 /* UIImage+Deezer.swift in Sources */,
 				A3C571AA2895B4AB00BFEB17 /* GenerateUIColor.swift in Sources */,
+				A3C571CE2895D19F00BFEB17 /* RegisterView.swift in Sources */,
 				A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */,
+				A3C571CC2895D18300BFEB17 /* RegisterViewController.swift in Sources */,
 				A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */,
 				A3C571A62895B42200BFEB17 /* UIColor+Deezer.swift in Sources */,
 				A3C571C92895CB2900BFEB17 /* InputTextField.swift in Sources */,

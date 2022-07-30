@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 enum InputTextFieldType {
+    case name
     case email
     case password
     case confirmPassword
@@ -17,16 +18,18 @@ enum InputTextFieldType {
 
 class InputTextField: UITextField {
     let padding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+    var type: InputTextFieldType?
 
     func setup(type: InputTextFieldType) {
         setupStyles()
+        self.type = type
         switch type {
         case .email:
             setupEmail()
         case .password, .confirmPassword:
             setupPassword()
-        case .search:
-            break
+        case .search, .name:
+            setupDefaults()
         }
     }
 
@@ -40,9 +43,18 @@ class InputTextField: UITextField {
     }
 
     private func setupPassword() {
+        let placeholder = type == .password ? "SENHA" : "CONFIRME A SENHA"
         isSecureTextEntry = true
         attributedPlaceholder = NSAttributedString(
-            string: "SENHA",
+            string: placeholder,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
+    }
+
+    private func setupDefaults() {
+        let placeholder = type == .name ? "NOME" : "BUSCAR"
+        attributedPlaceholder = NSAttributedString(
+            string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
         )
     }
