@@ -25,6 +25,10 @@
 		A3C571B92895B7AF00BFEB17 /* Dimen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571B82895B7AF00BFEB17 /* Dimen.swift */; };
 		A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571BC2895B9E500BFEB17 /* PrimaryButton.swift */; };
 		A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571BE2895BCD800BFEB17 /* SecondaryButton.swift */; };
+		A3C571C22895BFFD00BFEB17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571C12895BFFD00BFEB17 /* LoginViewController.swift */; };
+		A3C571C42895C03000BFEB17 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571C32895C03000BFEB17 /* LoginView.swift */; };
+		A3C571C62895C38500BFEB17 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571C52895C38500BFEB17 /* Navigation.swift */; };
+		A3C571C92895CB2900BFEB17 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C571C82895CB2900BFEB17 /* InputTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		A3C571B82895B7AF00BFEB17 /* Dimen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimen.swift; sourceTree = "<group>"; };
 		A3C571BC2895B9E500BFEB17 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		A3C571BE2895BCD800BFEB17 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		A3C571C12895BFFD00BFEB17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A3C571C32895C03000BFEB17 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A3C571C52895C38500BFEB17 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		A3C571C82895CB2900BFEB17 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,7 @@
 		A3C5719D2895B08700BFEB17 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A3C571C02895BFED00BFEB17 /* Login */,
 				A3C5719E2895B08D00BFEB17 /* Initial */,
 			);
 			path = Presentation;
@@ -221,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				A3C571B32895B65700BFEB17 /* Stylable.swift */,
+				A3C571C52895C38500BFEB17 /* Navigation.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -236,6 +246,7 @@
 		A3C571BA2895B95400BFEB17 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A3C571C72895C61E00BFEB17 /* Textfield */,
 				A3C571BB2895B96400BFEB17 /* Buttons */,
 			);
 			path = Components;
@@ -248,6 +259,23 @@
 				A3C571BE2895BCD800BFEB17 /* SecondaryButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		A3C571C02895BFED00BFEB17 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571C12895BFFD00BFEB17 /* LoginViewController.swift */,
+				A3C571C32895C03000BFEB17 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A3C571C72895C61E00BFEB17 /* Textfield */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571C82895CB2900BFEB17 /* InputTextField.swift */,
+			);
+			path = Textfield;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,8 +408,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C571C22895BFFD00BFEB17 /* LoginViewController.swift in Sources */,
 				A3C571B42895B65700BFEB17 /* Stylable.swift in Sources */,
 				A3C571A12895B12D00BFEB17 /* InitialViewController.swift in Sources */,
+				A3C571C42895C03000BFEB17 /* LoginView.swift in Sources */,
 				A3C571B12895B56900BFEB17 /* InitialView.swift in Sources */,
 				A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */,
 				A3C571AD2895B4EC00BFEB17 /* UIImage+Deezer.swift in Sources */,
@@ -389,6 +419,8 @@
 				A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */,
 				A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */,
 				A3C571A62895B42200BFEB17 /* UIColor+Deezer.swift in Sources */,
+				A3C571C92895CB2900BFEB17 /* InputTextField.swift in Sources */,
+				A3C571C62895C38500BFEB17 /* Navigation.swift in Sources */,
 				A3C571AF2895B51A00BFEB17 /* GenerateUIImage.swift in Sources */,
 				A3C571B92895B7AF00BFEB17 /* Dimen.swift in Sources */,
 				A3C5716F2895B00F00BFEB17 /* SceneDelegate.swift in Sources */,
