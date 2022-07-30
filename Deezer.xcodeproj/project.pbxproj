@@ -15,6 +15,8 @@
 		A37C36032895DC3000F188BA /* UserModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36022895DC3000F188BA /* UserModelBuilder.swift */; };
 		A37C36062895DC9400F188BA /* DefaultFirebaseAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36052895DC9400F188BA /* DefaultFirebaseAuthRepository.swift */; };
 		A37C36092895DCE700F188BA /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36082895DCE700F188BA /* UserEntity.swift */; };
+		A37C360D2895DD9500F188BA /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C360C2895DD9500F188BA /* RegisterUseCase.swift */; };
+		A37C360F2895DDA800F188BA /* DefaultRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C360E2895DDA800F188BA /* DefaultRegisterUseCase.swift */; };
 		A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */; };
 		A3C5716F2895B00F00BFEB17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */; };
 		A3C571762895B01100BFEB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C571752895B01100BFEB17 /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		A37C36022895DC3000F188BA /* UserModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelBuilder.swift; sourceTree = "<group>"; };
 		A37C36052895DC9400F188BA /* DefaultFirebaseAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFirebaseAuthRepository.swift; sourceTree = "<group>"; };
 		A37C36082895DCE700F188BA /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		A37C360C2895DD9500F188BA /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		A37C360E2895DDA800F188BA /* DefaultRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRegisterUseCase.swift; sourceTree = "<group>"; };
 		A3C571692895B00F00BFEB17 /* Deezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		A37C35F92895DB4D00F188BA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A37C360A2895DD7100F188BA /* UseCase */,
 				A37C35FE2895DBF500F188BA /* Model */,
 				A37C35FB2895DB9500F188BA /* Interfaces */,
 			);
@@ -203,6 +208,23 @@
 				A37C36082895DCE700F188BA /* UserEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		A37C360A2895DD7100F188BA /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				A37C360B2895DD8600F188BA /* Register */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A37C360B2895DD8600F188BA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A37C360C2895DD9500F188BA /* RegisterUseCase.swift */,
+				A37C360E2895DDA800F188BA /* DefaultRegisterUseCase.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		A3C571602895B00F00BFEB17 = {
@@ -647,6 +669,7 @@
 			files = (
 				A3C571C22895BFFD00BFEB17 /* LoginViewController.swift in Sources */,
 				A37C36002895DC0100F188BA /* UserModel.swift in Sources */,
+				A37C360F2895DDA800F188BA /* DefaultRegisterUseCase.swift in Sources */,
 				A3C571B42895B65700BFEB17 /* Stylable.swift in Sources */,
 				A3C571A12895B12D00BFEB17 /* InitialViewController.swift in Sources */,
 				A37C36062895DC9400F188BA /* DefaultFirebaseAuthRepository.swift in Sources */,
@@ -663,6 +686,7 @@
 				A3C571CC2895D18300BFEB17 /* RegisterViewController.swift in Sources */,
 				A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */,
 				A3C571A62895B42200BFEB17 /* UIColor+Deezer.swift in Sources */,
+				A37C360D2895DD9500F188BA /* RegisterUseCase.swift in Sources */,
 				A3C571C92895CB2900BFEB17 /* InputTextField.swift in Sources */,
 				A3C571C62895C38500BFEB17 /* Navigation.swift in Sources */,
 				A3C571AF2895B51A00BFEB17 /* GenerateUIImage.swift in Sources */,
