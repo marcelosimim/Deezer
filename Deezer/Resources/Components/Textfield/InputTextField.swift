@@ -24,12 +24,14 @@ class InputTextField: UITextField {
         setupStyles()
         self.type = type
         switch type {
+        case .name:
+            setupName()
         case .email:
             setupEmail()
         case .password, .confirmPassword:
             setupPassword()
-        case .search, .name:
-            setupDefaults()
+        case .search:
+            setupSearch()
         }
     }
 
@@ -51,10 +53,21 @@ class InputTextField: UITextField {
         )
     }
 
-    private func setupDefaults() {
-        let placeholder = type == .name ? "NOME" : "BUSCAR"
+    private func setupSearch() {
+        let imageView = UIImageView(image: .search)
+        imageView.tintColor = .lightGray
+        imageView.contentMode = .center
+        rightView = imageView
+        rightViewMode = .always
         attributedPlaceholder = NSAttributedString(
-            string: placeholder,
+            string: "PESQUISE AQUI!",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+        )
+    }
+
+    private func setupName() {
+        attributedPlaceholder = NSAttributedString(
+            string: "NOME",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
         )
     }
@@ -89,5 +102,8 @@ extension InputTextField {
 
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
+    }
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.width - 30, y: 0, width: 20 , height: bounds.height)
     }
 }

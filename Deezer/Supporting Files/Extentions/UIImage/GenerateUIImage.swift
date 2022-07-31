@@ -14,4 +14,13 @@ extension UIImage {
     public static var happyMusic: UIImage {
         imageBuilder("happy_music")
     }
+    public static var search: UIImage {
+        UIImage(systemName: "magnifyingglass")!
+    }
+    public static var radioFilled: UIImage {
+        UIImage(systemName: "circle.inset.filled")!
+    }
+    public static var radioEmpty: UIImage {
+        UIImage(systemName: "circle")!
+    }
 }
