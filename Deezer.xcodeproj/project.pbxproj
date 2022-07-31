@@ -23,6 +23,7 @@
 		A37C361A2895EDB700F188BA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36192895EDB700F188BA /* Observable.swift */; };
 		A37C361D2895F3E000F188BA /* String+Deezer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C361C2895F3E000F188BA /* String+Deezer.swift */; };
 		A37C361F28960F1D00F188BA /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C361E28960F1D00F188BA /* AlertController.swift */; };
+		A37C36242896C23200F188BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36232896C23200F188BA /* HomeViewController.swift */; };
 		A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */; };
 		A3C5716F2895B00F00BFEB17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */; };
 		A3C571762895B01100BFEB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C571752895B01100BFEB17 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		A37C36192895EDB700F188BA /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		A37C361C2895F3E000F188BA /* String+Deezer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Deezer.swift"; sourceTree = "<group>"; };
 		A37C361E28960F1D00F188BA /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		A37C36232896C23200F188BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A3C571692895B00F00BFEB17 /* Deezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C5716C2895B00F00BFEB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C5716E2895B00F00BFEB17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +275,32 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		A37C36202896C20400F188BA /* Before Login */ = {
+			isa = PBXGroup;
+			children = (
+				A3C571CA2895D17100BFEB17 /* Register */,
+				A3C571C02895BFED00BFEB17 /* Login */,
+				A3C5719E2895B08D00BFEB17 /* Initial */,
+			);
+			path = "Before Login";
+			sourceTree = "<group>";
+		};
+		A37C36212896C21300F188BA /* After Login */ = {
+			isa = PBXGroup;
+			children = (
+				A37C36222896C22200F188BA /* Home */,
+			);
+			path = "After Login";
+			sourceTree = "<group>";
+		};
+		A37C36222896C22200F188BA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A37C36232896C23200F188BA /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		A3C571602895B00F00BFEB17 = {
 			isa = PBXGroup;
 			children = (
@@ -332,9 +360,8 @@
 			isa = PBXGroup;
 			children = (
 				A37C36152895DEB300F188BA /* Model */,
-				A3C571CA2895D17100BFEB17 /* Register */,
-				A3C571C02895BFED00BFEB17 /* Login */,
-				A3C5719E2895B08D00BFEB17 /* Initial */,
+				A37C36202896C20400F188BA /* Before Login */,
+				A37C36212896C21300F188BA /* After Login */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -746,6 +773,7 @@
 				A3C571C62895C38500BFEB17 /* Navigation.swift in Sources */,
 				A37C36142895DE8F00F188BA /* RegisterViewModel.swift in Sources */,
 				A3C571AF2895B51A00BFEB17 /* GenerateUIImage.swift in Sources */,
+				A37C36242896C23200F188BA /* HomeViewController.swift in Sources */,
 				A3C571B92895B7AF00BFEB17 /* Dimen.swift in Sources */,
 				A3C5716F2895B00F00BFEB17 /* SceneDelegate.swift in Sources */,
 				A3C571B72895B6AA00BFEB17 /* UIView+Deezer.swift in Sources */,

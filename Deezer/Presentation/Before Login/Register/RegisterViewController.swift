@@ -88,7 +88,7 @@ extension RegisterViewController: Navigation {
         registerViewModel.didTapRegister()
         registerViewModel.registerSuccess.bindWithoutFire { error in
             guard let error = error else {
-                Alert.alertToCorrect(title: "Success", message: "Registro feito", controller: self)
+                self.navigationController?.pushViewController(HomeViewController.init(), animated: true)
                 return
             }
             Alert.alertToCorrect(title: "Erro", message: error.localizedDescription, controller: self)
