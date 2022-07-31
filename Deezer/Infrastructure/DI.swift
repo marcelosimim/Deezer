@@ -18,6 +18,7 @@ class AppContainer {
         container.register(LoginUseCase.self) { r in DefaultLoginUseCase(firebaseAuthRepository: r.resolve(FirebaseAuthRepository.self)!)}
         container.register(LoginViewModel.self) { r in DefaultLoginViewModel(loginUseCase: r.resolve(LoginUseCase.self)!)}
         container.register(HomeUseCase.self) { r in DefaultHomeUseCase(deezerAPIRepository: r.resolve(DeezerAPIRepository.self)!)}
+        container.register(HomeViewModel.self) { r in DefaultHomeViewModel(homeUseCase: r.resolve(HomeUseCase.self)!)}
         return container
     }()
 }

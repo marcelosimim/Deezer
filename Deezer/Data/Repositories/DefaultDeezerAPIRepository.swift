@@ -20,7 +20,6 @@ class DefaultDeezerAPIRepository: DeezerAPIRepository {
                 do {
                     let decoder = JSONDecoder()
                     let results = try decoder.decode(ChartsModel.self, from: data)
-                    print("results", results)
                     completion(results)
                 }
                 catch {

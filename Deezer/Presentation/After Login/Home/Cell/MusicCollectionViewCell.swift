@@ -30,8 +30,9 @@ class MusicCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
     }
 
-    func setup(image: UIImage) {
-        imageView.image = image
+    func setup(url: String) {
+        let url = URL(string: url)!
+        downloadImage(from: url)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.backgroundColor = .black
@@ -40,5 +41,17 @@ class MusicCollectionViewCell: UICollectionViewCell {
 }
 
 extension MusicCollectionViewCell: Stylable {
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
 
+    func downloadImage(from url: URL) {
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            DispatchQueue.main.async() { [weak self] in
+                self?.imageView.image = UIImage(data: data)
+            }
+        }
+    }
 }

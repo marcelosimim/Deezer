@@ -24,6 +24,10 @@
 		A34BBA65289703DE00C40ECD /* AlbumModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA64289703DE00C40ECD /* AlbumModelBuilder.swift */; };
 		A34BBA6828971BC000C40ECD /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA6728971BC000C40ECD /* HomeUseCase.swift */; };
 		A34BBA6A28971BDD00C40ECD /* DefaultHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA6928971BDD00C40ECD /* DefaultHomeUseCase.swift */; };
+		A34BBA6C28971DC800C40ECD /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA6B28971DC800C40ECD /* Music.swift */; };
+		A34BBA7028971E0300C40ECD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA6F28971E0300C40ECD /* Album.swift */; };
+		A34BBA7228971E1D00C40ECD /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA7128971E1D00C40ECD /* Artist.swift */; };
+		A34BBA742897201700C40ECD /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA732897201700C40ECD /* Charts.swift */; };
 		A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB962896C64900430A03 /* LoginUseCase.swift */; };
 		A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */; };
 		A372CB9B2896C85E00430A03 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB9A2896C85E00430A03 /* LoginViewModel.swift */; };
@@ -108,6 +112,10 @@
 		A34BBA64289703DE00C40ECD /* AlbumModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModelBuilder.swift; sourceTree = "<group>"; };
 		A34BBA6728971BC000C40ECD /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		A34BBA6928971BDD00C40ECD /* DefaultHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeUseCase.swift; sourceTree = "<group>"; };
+		A34BBA6B28971DC800C40ECD /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		A34BBA6F28971E0300C40ECD /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		A34BBA7128971E1D00C40ECD /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		A34BBA732897201700C40ECD /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 		A372CB962896C64900430A03 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB9A2896C85E00430A03 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -323,6 +331,10 @@
 			isa = PBXGroup;
 			children = (
 				A37C36162895DEC200F188BA /* User.swift */,
+				A34BBA6B28971DC800C40ECD /* Music.swift */,
+				A34BBA6F28971E0300C40ECD /* Album.swift */,
+				A34BBA7128971E1D00C40ECD /* Artist.swift */,
+				A34BBA732897201700C40ECD /* Charts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -845,18 +857,22 @@
 				A3C571CE2895D19F00BFEB17 /* RegisterView.swift in Sources */,
 				A37C36032895DC3000F188BA /* UserModelBuilder.swift in Sources */,
 				A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */,
+				A34BBA6C28971DC800C40ECD /* Music.swift in Sources */,
 				A34BBA5B2896FF9F00C40ECD /* MusicModel.swift in Sources */,
 				A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */,
 				A34BBA65289703DE00C40ECD /* AlbumModelBuilder.swift in Sources */,
+				A34BBA742897201700C40ECD /* Charts.swift in Sources */,
 				A37C361A2895EDB700F188BA /* Observable.swift in Sources */,
 				A34BBA6828971BC000C40ECD /* HomeUseCase.swift in Sources */,
 				A37C35FD2895DBB300F188BA /* FirebaseAuthRepository.swift in Sources */,
 				A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */,
+				A34BBA7228971E1D00C40ECD /* Artist.swift in Sources */,
 				A3C571CC2895D18300BFEB17 /* RegisterViewController.swift in Sources */,
 				A34BBA4D2896D07B00C40ECD /* HomeView.swift in Sources */,
 				A34BBA5F2897014C00C40ECD /* AlbumModel.swift in Sources */,
 				A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */,
 				A37C361D2895F3E000F188BA /* String+Deezer.swift in Sources */,
+				A34BBA7028971E0300C40ECD /* Album.swift in Sources */,
 				A3C571A62895B42200BFEB17 /* UIColor+Deezer.swift in Sources */,
 				A34BBA632897031A00C40ECD /* ArtistModelBuilder.swift in Sources */,
 				A37C360D2895DD9500F188BA /* RegisterUseCase.swift in Sources */,
