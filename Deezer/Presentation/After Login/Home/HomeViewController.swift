@@ -9,8 +9,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    private let homeView = HomeView.init()
+    var currentUser: User?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view = homeView
     }
 }
+

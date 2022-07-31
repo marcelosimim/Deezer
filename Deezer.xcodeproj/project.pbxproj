@@ -10,6 +10,7 @@
 		0208F84A1429434AFB3CDDB8 /* Pods_Deezer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EB91F5529FB331BD3BD755 /* Pods_Deezer.framework */; };
 		1E82C2CFD9ACAC9C0002AA84 /* Pods_DeezerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA9E2BBACFE02C89948889D /* Pods_DeezerTests.framework */; };
 		4E7D8358CE67A69D35C7CD0A /* Pods_Deezer_DeezerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96228594A7FCD7AD28272A0A /* Pods_Deezer_DeezerUITests.framework */; };
+		A34BBA4D2896D07B00C40ECD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA4C2896D07B00C40ECD /* HomeView.swift */; };
 		A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB962896C64900430A03 /* LoginUseCase.swift */; };
 		A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */; };
 		A372CB9B2896C85E00430A03 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB9A2896C85E00430A03 /* LoginViewModel.swift */; };
@@ -80,6 +81,7 @@
 		93EB91F5529FB331BD3BD755 /* Pods_Deezer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deezer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96228594A7FCD7AD28272A0A /* Pods_Deezer_DeezerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deezer_DeezerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA9E2BBACFE02C89948889D /* Pods_DeezerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeezerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34BBA4C2896D07B00C40ECD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A372CB962896C64900430A03 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB9A2896C85E00430A03 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				A37C36232896C23200F188BA /* HomeViewController.swift */,
+				A34BBA4C2896D07B00C40ECD /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 				A37C35FD2895DBB300F188BA /* FirebaseAuthRepository.swift in Sources */,
 				A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */,
 				A3C571CC2895D18300BFEB17 /* RegisterViewController.swift in Sources */,
+				A34BBA4D2896D07B00C40ECD /* HomeView.swift in Sources */,
 				A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */,
 				A37C361D2895F3E000F188BA /* String+Deezer.swift in Sources */,
 				A3C571A62895B42200BFEB17 /* UIColor+Deezer.swift in Sources */,
