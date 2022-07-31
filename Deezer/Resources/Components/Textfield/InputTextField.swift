@@ -58,12 +58,21 @@ class InputTextField: UITextField {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
         )
     }
+
+    func setValidField() {
+        textColor = .lightGray
+        layer.borderColor = UIColor.lightGray.cgColor
+    }
+
+    func setInvalidField() {
+        textColor = .red
+        layer.borderColor = UIColor.red.cgColor
+    }
 }
 
 extension InputTextField: Stylable {
     func setupColors() {
-        textColor = .lightGray
-        layer.borderColor = UIColor.lightGray.cgColor
+        setValidField()
         layer.borderWidth = 1
         layer.cornerRadius = 5
     }
