@@ -12,6 +12,7 @@
 		4E7D8358CE67A69D35C7CD0A /* Pods_Deezer_DeezerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96228594A7FCD7AD28272A0A /* Pods_Deezer_DeezerUITests.framework */; };
 		A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB962896C64900430A03 /* LoginUseCase.swift */; };
 		A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */; };
+		A372CB9B2896C85E00430A03 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB9A2896C85E00430A03 /* LoginViewModel.swift */; };
 		A37C35FD2895DBB300F188BA /* FirebaseAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C35FC2895DBB300F188BA /* FirebaseAuthRepository.swift */; };
 		A37C36002895DC0100F188BA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C35FF2895DC0100F188BA /* UserModel.swift */; };
 		A37C36032895DC3000F188BA /* UserModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36022895DC3000F188BA /* UserModelBuilder.swift */; };
@@ -81,6 +82,7 @@
 		9CA9E2BBACFE02C89948889D /* Pods_DeezerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeezerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A372CB962896C64900430A03 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginUseCase.swift; sourceTree = "<group>"; };
+		A372CB9A2896C85E00430A03 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A37C35FC2895DBB300F188BA /* FirebaseAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthRepository.swift; sourceTree = "<group>"; };
 		A37C35FF2895DC0100F188BA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A37C36022895DC3000F188BA /* UserModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelBuilder.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 			children = (
 				A3C571C12895BFFD00BFEB17 /* LoginViewController.swift */,
 				A3C571C32895C03000BFEB17 /* LoginView.swift */,
+				A372CB9A2896C85E00430A03 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				A37C36062895DC9400F188BA /* DefaultFirebaseAuthRepository.swift in Sources */,
 				A3C571C42895C03000BFEB17 /* LoginView.swift in Sources */,
 				A3C571B12895B56900BFEB17 /* InitialView.swift in Sources */,
+				A372CB9B2896C85E00430A03 /* LoginViewModel.swift in Sources */,
 				A37C36172895DEC200F188BA /* User.swift in Sources */,
 				A37C36092895DCE700F188BA /* UserEntity.swift in Sources */,
 				A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */,

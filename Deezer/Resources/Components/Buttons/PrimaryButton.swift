@@ -9,11 +9,11 @@ import UIKit
 
 class PrimaryButton: UIButton {
 
-    func setup(title: String) {
+    func setup(title: String, isEnabled: Bool = true) {
         setupStyles()
         layer.cornerRadius = 5
         setTitle(title, for: .normal)
-        isEnabled = false
+        self.isEnabled = isEnabled
     }
 }
 

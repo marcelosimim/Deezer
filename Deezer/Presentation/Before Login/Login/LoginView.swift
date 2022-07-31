@@ -15,13 +15,13 @@ class LoginView: UIView {
         return image
     }()
 
-    private let emailTextField: InputTextField = {
+    let emailTextField: InputTextField = {
         let textfield = InputTextField()
         textfield.setup(type: .email)
         return textfield
     }()
 
-    private let passwordTextField: InputTextField = {
+    let passwordTextField: InputTextField = {
         let textfield = InputTextField()
         textfield.setup(type: .password)
         return textfield
@@ -44,7 +44,7 @@ class LoginView: UIView {
         mainImage.centerHorizontal(to: self)
         mainImage.heightTo(260*Dimen.heightMultiplier)
 
-        emailTextField.topToBottom(of: mainImage, margin: 115*Dimen.heightMultiplier)
+        emailTextField.topToBottom(of: mainImage, margin: 50*Dimen.heightMultiplier)
         emailTextField.centerHorizontal(to: self)
         emailTextField.leadingToLeading(of: self, margin: Dimen.leadingMargin)
         emailTextField.heightTo(Dimen.textFieldHeight)
@@ -71,6 +71,6 @@ extension LoginView: Stylable {
     }
 
     func setupTexts() {
-        loginButton.setup(title: "ENTRAR")
+        loginButton.setup(title: "ENTRAR", isEnabled: false)
     }
 }
