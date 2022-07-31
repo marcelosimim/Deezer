@@ -13,6 +13,15 @@
 		A34BBA4D2896D07B00C40ECD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA4C2896D07B00C40ECD /* HomeView.swift */; };
 		A34BBA502896D7AF00C40ECD /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA4F2896D7AF00C40ECD /* RadioButton.swift */; };
 		A34BBA532896F01500C40ECD /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA522896F01500C40ECD /* MusicCollectionViewCell.swift */; };
+		A34BBA552896F6D900C40ECD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA542896F6D900C40ECD /* HomeViewModel.swift */; };
+		A34BBA572896FEAE00C40ECD /* DeezerAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA562896FEAE00C40ECD /* DeezerAPIRepository.swift */; };
+		A34BBA592896FED700C40ECD /* DefaultDeezerAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA582896FED700C40ECD /* DefaultDeezerAPIRepository.swift */; };
+		A34BBA5B2896FF9F00C40ECD /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA5A2896FF9F00C40ECD /* MusicModel.swift */; };
+		A34BBA5D289700B500C40ECD /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA5C289700B500C40ECD /* ArtistModel.swift */; };
+		A34BBA5F2897014C00C40ECD /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA5E2897014C00C40ECD /* AlbumModel.swift */; };
+		A34BBA61289701B000C40ECD /* MusicModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA60289701B000C40ECD /* MusicModelBuilder.swift */; };
+		A34BBA632897031A00C40ECD /* ArtistModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA622897031A00C40ECD /* ArtistModelBuilder.swift */; };
+		A34BBA65289703DE00C40ECD /* AlbumModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA64289703DE00C40ECD /* AlbumModelBuilder.swift */; };
 		A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB962896C64900430A03 /* LoginUseCase.swift */; };
 		A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */; };
 		A372CB9B2896C85E00430A03 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB9A2896C85E00430A03 /* LoginViewModel.swift */; };
@@ -86,6 +95,15 @@
 		A34BBA4C2896D07B00C40ECD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A34BBA4F2896D7AF00C40ECD /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		A34BBA522896F01500C40ECD /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
+		A34BBA542896F6D900C40ECD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A34BBA562896FEAE00C40ECD /* DeezerAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerAPIRepository.swift; sourceTree = "<group>"; };
+		A34BBA582896FED700C40ECD /* DefaultDeezerAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDeezerAPIRepository.swift; sourceTree = "<group>"; };
+		A34BBA5A2896FF9F00C40ECD /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		A34BBA5C289700B500C40ECD /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
+		A34BBA5E2897014C00C40ECD /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		A34BBA60289701B000C40ECD /* MusicModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModelBuilder.swift; sourceTree = "<group>"; };
+		A34BBA622897031A00C40ECD /* ArtistModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModelBuilder.swift; sourceTree = "<group>"; };
+		A34BBA64289703DE00C40ECD /* AlbumModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModelBuilder.swift; sourceTree = "<group>"; };
 		A372CB962896C64900430A03 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB9A2896C85E00430A03 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -216,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				A37C35FC2895DBB300F188BA /* FirebaseAuthRepository.swift */,
+				A34BBA562896FEAE00C40ECD /* DeezerAPIRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -225,6 +244,9 @@
 			children = (
 				A37C36012895DC1700F188BA /* Builders */,
 				A37C35FF2895DC0100F188BA /* UserModel.swift */,
+				A34BBA5A2896FF9F00C40ECD /* MusicModel.swift */,
+				A34BBA5C289700B500C40ECD /* ArtistModel.swift */,
+				A34BBA5E2897014C00C40ECD /* AlbumModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +255,9 @@
 			isa = PBXGroup;
 			children = (
 				A37C36022895DC3000F188BA /* UserModelBuilder.swift */,
+				A34BBA60289701B000C40ECD /* MusicModelBuilder.swift */,
+				A34BBA622897031A00C40ECD /* ArtistModelBuilder.swift */,
+				A34BBA64289703DE00C40ECD /* AlbumModelBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -241,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				A37C36052895DC9400F188BA /* DefaultFirebaseAuthRepository.swift */,
+				A34BBA582896FED700C40ECD /* DefaultDeezerAPIRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -329,6 +355,7 @@
 				A34BBA512896EFED00C40ECD /* Cell */,
 				A37C36232896C23200F188BA /* HomeViewController.swift */,
 				A34BBA4C2896D07B00C40ECD /* HomeView.swift */,
+				A34BBA542896F6D900C40ECD /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -781,8 +808,12 @@
 				A3C571C22895BFFD00BFEB17 /* LoginViewController.swift in Sources */,
 				A37C36002895DC0100F188BA /* UserModel.swift in Sources */,
 				A37C360F2895DDA800F188BA /* DefaultRegisterUseCase.swift in Sources */,
+				A34BBA552896F6D900C40ECD /* HomeViewModel.swift in Sources */,
 				A3C571B42895B65700BFEB17 /* Stylable.swift in Sources */,
 				A34BBA532896F01500C40ECD /* MusicCollectionViewCell.swift in Sources */,
+				A34BBA592896FED700C40ECD /* DefaultDeezerAPIRepository.swift in Sources */,
+				A34BBA572896FEAE00C40ECD /* DeezerAPIRepository.swift in Sources */,
+				A34BBA5D289700B500C40ECD /* ArtistModel.swift in Sources */,
 				A3C571A12895B12D00BFEB17 /* InitialViewController.swift in Sources */,
 				A34BBA502896D7AF00C40ECD /* RadioButton.swift in Sources */,
 				A37C36062895DC9400F188BA /* DefaultFirebaseAuthRepository.swift in Sources */,
@@ -793,20 +824,25 @@
 				A37C36092895DCE700F188BA /* UserEntity.swift in Sources */,
 				A3C5716D2895B00F00BFEB17 /* AppDelegate.swift in Sources */,
 				A3C571AD2895B4EC00BFEB17 /* UIImage+Deezer.swift in Sources */,
+				A34BBA61289701B000C40ECD /* MusicModelBuilder.swift in Sources */,
 				A37C361F28960F1D00F188BA /* AlertController.swift in Sources */,
 				A3C571AA2895B4AB00BFEB17 /* GenerateUIColor.swift in Sources */,
 				A3C571CE2895D19F00BFEB17 /* RegisterView.swift in Sources */,
 				A37C36032895DC3000F188BA /* UserModelBuilder.swift in Sources */,
 				A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */,
+				A34BBA5B2896FF9F00C40ECD /* MusicModel.swift in Sources */,
 				A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */,
+				A34BBA65289703DE00C40ECD /* AlbumModelBuilder.swift in Sources */,
 				A37C361A2895EDB700F188BA /* Observable.swift in Sources */,
 				A37C35FD2895DBB300F188BA /* FirebaseAuthRepository.swift in Sources */,
 				A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */,
 				A3C571CC2895D18300BFEB17 /* RegisterViewController.swift in Sources */,
 				A34BBA4D2896D07B00C40ECD /* HomeView.swift in Sources */,
+				A34BBA5F2897014C00C40ECD /* AlbumModel.swift in Sources */,
 				A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */,
 				A37C361D2895F3E000F188BA /* String+Deezer.swift in Sources */,
 				A3C571A62895B42200BFEB17 /* UIColor+Deezer.swift in Sources */,
+				A34BBA632897031A00C40ECD /* ArtistModelBuilder.swift in Sources */,
 				A37C360D2895DD9500F188BA /* RegisterUseCase.swift in Sources */,
 				A37C36122895DE0B00F188BA /* DI.swift in Sources */,
 				A3C571C92895CB2900BFEB17 /* InputTextField.swift in Sources */,
