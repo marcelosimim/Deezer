@@ -21,6 +21,6 @@ struct UserEntity {
     }
 
     static func fromModel(user: UserModel) -> UserEntity {
-        UserEntity(fullName: user.fullName, cpf: user.cpf, perfilImage: user.perfilImage, email: user.email)
+        UserEntity(fullName: user.fullName, perfilImage: user.perfilImage, email: user.email)
     }
 }

@@ -14,7 +14,7 @@ class AppContainer {
 
         container.register(FirebaseAuthRepository.self) { _ in DefaultFirebaseAuthRepository()}
         container.register(RegisterUseCase.self) { r in DefaultRegisterUseCase(firebaseAuthRepository: r.resolve(FirebaseAuthRepository.self)!)}
-        container.register(RegisterViewModel.self) { r in RegisterViewModel(registerUseCase: r.resolve(RegisterUseCase.self)!)}
+        container.register(RegisterViewModel.self) { r in DefaultRegisterViewModel(registerUseCase: r.resolve(RegisterUseCase.self)!)}
 
         return container
     }()
