@@ -22,6 +22,8 @@
 		A34BBA61289701B000C40ECD /* MusicModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA60289701B000C40ECD /* MusicModelBuilder.swift */; };
 		A34BBA632897031A00C40ECD /* ArtistModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA622897031A00C40ECD /* ArtistModelBuilder.swift */; };
 		A34BBA65289703DE00C40ECD /* AlbumModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA64289703DE00C40ECD /* AlbumModelBuilder.swift */; };
+		A34BBA6828971BC000C40ECD /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA6728971BC000C40ECD /* HomeUseCase.swift */; };
+		A34BBA6A28971BDD00C40ECD /* DefaultHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA6928971BDD00C40ECD /* DefaultHomeUseCase.swift */; };
 		A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB962896C64900430A03 /* LoginUseCase.swift */; };
 		A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */; };
 		A372CB9B2896C85E00430A03 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB9A2896C85E00430A03 /* LoginViewModel.swift */; };
@@ -104,6 +106,8 @@
 		A34BBA60289701B000C40ECD /* MusicModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModelBuilder.swift; sourceTree = "<group>"; };
 		A34BBA622897031A00C40ECD /* ArtistModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModelBuilder.swift; sourceTree = "<group>"; };
 		A34BBA64289703DE00C40ECD /* AlbumModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModelBuilder.swift; sourceTree = "<group>"; };
+		A34BBA6728971BC000C40ECD /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		A34BBA6928971BDD00C40ECD /* DefaultHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHomeUseCase.swift; sourceTree = "<group>"; };
 		A372CB962896C64900430A03 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB9A2896C85E00430A03 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -202,6 +206,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A34BBA6628971BB700C40ECD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A34BBA6728971BC000C40ECD /* HomeUseCase.swift */,
+				A34BBA6928971BDD00C40ECD /* DefaultHomeUseCase.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		A372CB952896C63B00430A03 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +295,7 @@
 		A37C360A2895DD7100F188BA /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				A34BBA6628971BB700C40ECD /* Home */,
 				A372CB952896C63B00430A03 /* Login */,
 				A37C360B2895DD8600F188BA /* Register */,
 			);
@@ -827,6 +841,7 @@
 				A34BBA61289701B000C40ECD /* MusicModelBuilder.swift in Sources */,
 				A37C361F28960F1D00F188BA /* AlertController.swift in Sources */,
 				A3C571AA2895B4AB00BFEB17 /* GenerateUIColor.swift in Sources */,
+				A34BBA6A28971BDD00C40ECD /* DefaultHomeUseCase.swift in Sources */,
 				A3C571CE2895D19F00BFEB17 /* RegisterView.swift in Sources */,
 				A37C36032895DC3000F188BA /* UserModelBuilder.swift in Sources */,
 				A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */,
@@ -834,6 +849,7 @@
 				A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */,
 				A34BBA65289703DE00C40ECD /* AlbumModelBuilder.swift in Sources */,
 				A37C361A2895EDB700F188BA /* Observable.swift in Sources */,
+				A34BBA6828971BC000C40ECD /* HomeUseCase.swift in Sources */,
 				A37C35FD2895DBB300F188BA /* FirebaseAuthRepository.swift in Sources */,
 				A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */,
 				A3C571CC2895D18300BFEB17 /* RegisterViewController.swift in Sources */,

@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
         view = homeView
         homeView.chartsCollectionView.delegate = self
         homeView.chartsCollectionView.dataSource = self
-        let api = DefaultDeezerAPIRepository()
     }
 }
 
