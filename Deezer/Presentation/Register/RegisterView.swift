@@ -9,31 +9,25 @@ import UIKit
 
 class RegisterView: UIView {
 
-    private let mainImage: UIImageView = {
-        let image = UIImageView()
-        image.contentMode = .scaleAspectFit
-        return image
-    }()
-
-    private let nameTextField: InputTextField = {
+    lazy var nameTextField: InputTextField = {
         let textfield = InputTextField()
         textfield.setup(type: .name)
         return textfield
     }()
 
-    private let emailTextField: InputTextField = {
+    lazy var emailTextField: InputTextField = {
         let textfield = InputTextField()
         textfield.setup(type: .email)
         return textfield
     }()
 
-    private let passwordTextField: InputTextField = {
+    lazy var passwordTextField: InputTextField = {
         let textfield = InputTextField()
         textfield.setup(type: .password)
         return textfield
     }()
 
-    private let confirmPasswordTextField: InputTextField = {
+    lazy var confirmPasswordTextField: InputTextField = {
         let textfield = InputTextField()
         textfield.setup(type: .confirmPassword)
         return textfield
@@ -47,16 +41,12 @@ class RegisterView: UIView {
     }
 
     private func addViews() {
-        addSubviews([mainImage, nameTextField, emailTextField, passwordTextField, confirmPasswordTextField, registerButton])
+        addSubviews([nameTextField, emailTextField, passwordTextField, confirmPasswordTextField, registerButton])
         setupConstraits()
     }
 
     private func setupConstraits() {
-        mainImage.topToTop(of: self, margin: 120*Dimen.heightMultiplier)
-        mainImage.centerHorizontal(to: self)
-        mainImage.heightTo(260*Dimen.heightMultiplier)
-
-        nameTextField.topToBottom(of: mainImage, margin: 80*Dimen.heightMultiplier)
+        nameTextField.topToTop(of: self, margin: 120*Dimen.heightMultiplier)
         nameTextField.centerHorizontal(to: self)
         nameTextField.leadingToLeading(of: self, margin: Dimen.leadingMargin)
         nameTextField.heightTo(Dimen.textFieldHeight)
@@ -86,10 +76,6 @@ class RegisterView: UIView {
 extension RegisterView: Stylable {
     func setupColors() {
         backgroundColor = .background
-    }
-
-    func setupImages() {
-        mainImage.image = .happyMusic
     }
 
     func setupTexts() {
