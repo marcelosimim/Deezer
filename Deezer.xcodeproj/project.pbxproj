@@ -10,6 +10,8 @@
 		0208F84A1429434AFB3CDDB8 /* Pods_Deezer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EB91F5529FB331BD3BD755 /* Pods_Deezer.framework */; };
 		1E82C2CFD9ACAC9C0002AA84 /* Pods_DeezerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA9E2BBACFE02C89948889D /* Pods_DeezerTests.framework */; };
 		4E7D8358CE67A69D35C7CD0A /* Pods_Deezer_DeezerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96228594A7FCD7AD28272A0A /* Pods_Deezer_DeezerUITests.framework */; };
+		A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB962896C64900430A03 /* LoginUseCase.swift */; };
+		A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */; };
 		A37C35FD2895DBB300F188BA /* FirebaseAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C35FC2895DBB300F188BA /* FirebaseAuthRepository.swift */; };
 		A37C36002895DC0100F188BA /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C35FF2895DC0100F188BA /* UserModel.swift */; };
 		A37C36032895DC3000F188BA /* UserModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37C36022895DC3000F188BA /* UserModelBuilder.swift */; };
@@ -77,6 +79,8 @@
 		93EB91F5529FB331BD3BD755 /* Pods_Deezer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deezer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96228594A7FCD7AD28272A0A /* Pods_Deezer_DeezerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Deezer_DeezerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA9E2BBACFE02C89948889D /* Pods_DeezerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeezerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A372CB962896C64900430A03 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginUseCase.swift; sourceTree = "<group>"; };
 		A37C35FC2895DBB300F188BA /* FirebaseAuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthRepository.swift; sourceTree = "<group>"; };
 		A37C35FF2895DC0100F188BA /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A37C36022895DC3000F188BA /* UserModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelBuilder.swift; sourceTree = "<group>"; };
@@ -164,6 +168,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A372CB952896C63B00430A03 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A372CB962896C64900430A03 /* LoginUseCase.swift */,
+				A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		A37C35F82895DB3F00F188BA /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +240,7 @@
 		A37C360A2895DD7100F188BA /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				A372CB952896C63B00430A03 /* Login */,
 				A37C360B2895DD8600F188BA /* Register */,
 			);
 			path = UseCase;
@@ -761,8 +775,10 @@
 				A3C571CE2895D19F00BFEB17 /* RegisterView.swift in Sources */,
 				A37C36032895DC3000F188BA /* UserModelBuilder.swift in Sources */,
 				A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */,
+				A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */,
 				A37C361A2895EDB700F188BA /* Observable.swift in Sources */,
 				A37C35FD2895DBB300F188BA /* FirebaseAuthRepository.swift in Sources */,
+				A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */,
 				A3C571CC2895D18300BFEB17 /* RegisterViewController.swift in Sources */,
 				A3C571BD2895B9E500BFEB17 /* PrimaryButton.swift in Sources */,
 				A37C361D2895F3E000F188BA /* String+Deezer.swift in Sources */,
