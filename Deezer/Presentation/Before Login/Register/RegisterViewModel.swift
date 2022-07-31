@@ -92,7 +92,7 @@ class DefaultRegisterViewModel: RegisterViewModel {
 
     func canRegister() {
          isButtonEnabled.value = nameValid.value && emailValid.value && passwordValid.value && confirmPasswordValid.value
-     }
+    }
 
     private func isValidEmail(_ text: String?) -> Bool {
         guard let text = text else {

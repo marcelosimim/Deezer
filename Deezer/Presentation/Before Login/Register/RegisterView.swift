@@ -79,6 +79,6 @@ extension RegisterView: Stylable {
     }
 
     func setupTexts() {
-        registerButton.setup(title: "CADASTRAR")
+        registerButton.setup(title: "CADASTRAR", isEnabled: false)
     }
 }
