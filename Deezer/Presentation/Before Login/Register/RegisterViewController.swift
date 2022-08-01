@@ -80,8 +80,7 @@ extension RegisterViewController: UITextFieldDelegate {
 
 extension RegisterViewController: Navigation {
     func setupNavigationBar() {
-        navigationController?.navigationBar.backgroundColor = .lightGray
-        navigationController?.navigationBar.tintColor = .background
+        navigationController?.navigationBar.tintColor = .lightGray
     }
 
     @objc private func registerPressed() {

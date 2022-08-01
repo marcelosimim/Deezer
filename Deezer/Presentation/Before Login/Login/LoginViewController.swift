@@ -81,7 +81,6 @@ extension LoginViewController: Navigation {
     }
 
     func setupNavigationBar() {
-        navigationController?.navigationBar.backgroundColor = .lightGray
-        navigationController?.navigationBar.tintColor = .background
+        navigationController?.navigationBar.tintColor = .lightGray
     }
 }

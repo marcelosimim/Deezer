@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupNavigationBar()
         setViewModelBinds()
         setTextField()
         setupButtons()
@@ -210,6 +211,12 @@ extension HomeViewController {
                
             }
         }
+    }
+}
+
+extension HomeViewController: Navigation {
+    func setupNavigationBar() {
+        navigationController?.navigationItem.hidesBackButton = true
     }
 }
 
