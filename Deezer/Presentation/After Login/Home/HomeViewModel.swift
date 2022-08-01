@@ -20,6 +20,7 @@ protocol HomeViewModel {
     var isSingerButtonChecked: Observable<Bool> { get }
     var isMusicButtonChecked: Observable<Bool> { get }
     var currentUser: Observable<User> { get }
+    var collectionViewTitle: Observable<String> { get }
 
     func getCharts()
     func textFieldDidChange(_ text: String)
@@ -43,6 +44,7 @@ class DefaultHomeViewModel: HomeViewModel {
     var isSingerButtonChecked = Observable<Bool>(true)
     var isMusicButtonChecked = Observable<Bool>(false)
     var currentUser = Observable<User>(User())
+    var collectionViewTitle = Observable<String>("MAIS TOCADAS")
 
     init(homeUseCase: HomeUseCase) {
         self.homeUseCase = homeUseCase
@@ -51,8 +53,10 @@ class DefaultHomeViewModel: HomeViewModel {
     func getCharts() {
         homeUseCase.getCharts { musics in
             self.charts.value = Charts.fromChartsModel(charts: musics)
-            self.chartsSize = musics.data?.count ?? 0
+            let count = musics.data?.count ?? 0
+            self.chartsSize = count
             self.setShowsCharts()
+            self.collectionViewTitle.value = "\(count) MAIS TOCADAS"
         }
     }
 
@@ -79,16 +83,20 @@ class DefaultHomeViewModel: HomeViewModel {
     private func searchArtist(search: String) {
         homeUseCase.searchArtist(search: search) { artists in
             self.artists.value = Artists.fromArtistsModel(artistsModel: artists)
-            self.artistsSize = artists.data?.count ?? 0
+            let count = artists.data?.count ?? 0
+            self.artistsSize = count
             self.setShowsArtists()
+            self.collectionViewTitle.value = self.artistsSize > 1 ? "\(count) CANTORES" : "\(count) CANTOR"
         }
     }
 
     private func searchMusic(search: String) {
         homeUseCase.searchMusic(search: search, completion: { musics in
             self.musics.value = Charts.fromChartsModel(charts: musics)
-            self.musicsSize = musics.data?.count ?? 0
+            let count = musics.data?.count ?? 0
+            self.musicsSize = count
             self.setShowsMusics()
+            self.collectionViewTitle.value = self.artistsSize > 1 ? "\(count) MÚSICAS" : "\(count) MÚSICA"
         })
     }
 

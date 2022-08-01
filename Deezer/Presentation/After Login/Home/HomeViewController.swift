@@ -58,6 +58,12 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                 self.homeView.setupTexts()
             }
         }
+        homeViewModel.collectionViewTitle.bindWithoutFire { title in
+            DispatchQueue.main.async {
+                self.homeView.chartsTitleText = title
+                self.homeView.setupTexts()
+            }
+        }
         homeViewModel.getCharts()
         homeViewModel.getUserData()
     }

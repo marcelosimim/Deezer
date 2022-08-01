@@ -17,9 +17,18 @@ class HomeView: UIView {
         textfield.setup(type: .search)
         return textfield
     }()
-    let singerButton = RadioButton()
-    let musicButton = RadioButton()
+    let singerButton: RadioButton = {
+        let button = RadioButton()
+        button.setup(status: .filled, title: "CANTOR")
+        return button
+    }()
+    let musicButton: RadioButton = {
+        let button = RadioButton()
+        button.setup(status: .empty, title: "MÚSICA")
+        return button
+    }()
     let chartsTitle = UILabel()
+    var chartsTitleText = "MAIS TOCADAS"
     let chartsCollectionView: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collection.register(MusicCollectionViewCell.self, forCellWithReuseIdentifier: MusicCollectionViewCell.identifier)
@@ -71,9 +80,7 @@ extension HomeView: Stylable {
 
     func setupTexts() {
         welcomeText.text = "BEM VIND@ \(name?.uppercased() ?? "")!"
-        chartsTitle.text = "MAIS TOCADAS"
-        singerButton.setup(status: .filled, title: "CANTOR")
-        musicButton.setup(status: .empty, title: "MÚSICA")
+        chartsTitle.text = chartsTitleText
     }
 
     func setupFonts() {
