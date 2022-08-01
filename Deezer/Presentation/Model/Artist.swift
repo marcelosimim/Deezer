@@ -7,6 +7,22 @@
 
 import Foundation
 
+struct Artists {
+    var artists: [Artist]?
+
+    static func fromArtistsModel(artistsModel: ArtistsModel) -> Artists {
+        var artists:[Artist] = []
+        guard let data = artistsModel.data else {
+            return Artists()
+        }
+
+        for artist in data {
+            artists.append(Artist.fromArtistModel(artist: artist))
+        }
+        return Artists(artists: artists)
+    }
+}
+
 struct Artist {
     var id: Int?
     var name: String?

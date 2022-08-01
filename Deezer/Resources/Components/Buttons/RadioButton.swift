@@ -21,6 +21,11 @@ class RadioButton: UIButton {
         self.title = title
         setupStyles()
     }
+
+    func setup() {
+        status = status == .filled ? .empty : .filled
+        setupImages()
+    }
 }
 
 extension RadioButton: Stylable {

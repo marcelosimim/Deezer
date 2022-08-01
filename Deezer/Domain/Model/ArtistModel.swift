@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct ArtistsModel: Decodable {
+    var data: [ArtistModel]?
+}
+
 struct ArtistModel: Decodable {
     var id: Int?
     var name: String?

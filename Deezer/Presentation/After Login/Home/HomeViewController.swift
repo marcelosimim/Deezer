@@ -8,7 +8,7 @@
 import AVFoundation
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITextFieldDelegate {
 
     private let homeView = HomeView.init()
     private let homeViewModel = AppContainer.shared.resolve(HomeViewModel.self)!
@@ -25,31 +25,83 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setViewModelBinds()
+        setTextField()
+        setupButtons()
     }
 
-    func setViewModelBinds() {
+    private func setViewModelBinds() {
         homeViewModel.charts.bindWithoutFire { musics in
             DispatchQueue.main.async {
                 self.homeView.chartsCollectionView.reloadData()
             }
         }
+        homeViewModel.artists.bindWithoutFire { musics in
+            DispatchQueue.main.async {
+                self.homeView.chartsCollectionView.reloadData()
+            }
+        }
+        homeViewModel.showsCharts.bindWithoutFire { _ in
+            DispatchQueue.main.async {
+                self.homeView.chartsCollectionView.reloadData()
+            }
+        }
+        homeViewModel.isSingerButtonChecked.bindWithoutFire { _ in
+            self.homeView.singerButton.setup()
+            self.homeView.musicButton.setup()
+        }
+        homeViewModel.isMusicButtonChecked.bindWithoutFire { _ in
+            self.homeView.singerButton.setup()
+            self.homeView.musicButton.setup()
+        }
         homeViewModel.getCharts()
+    }
+
+    private func setTextField() {
+        homeView.searchField.delegate = self
+        homeView.searchField.addTarget(self, action: #selector(textFieldDidChange), for:  UIControl.Event.editingChanged)
+    }
+
+    private func setupButtons() {
+        homeView.singerButton.addTarget(self, action: #selector(singerTapped), for: .touchDown)
+        homeView.musicButton.addTarget(self, action: #selector(musicTapped), for: .touchDown)
+    }
+}
+
+extension HomeViewController {
+    @objc private func textFieldDidChange() {
+        guard let text = homeView.searchField.text else { return }
+        homeViewModel.textFieldDidChange(text)
+    }
+
+    @objc private func singerTapped() {
+        homeViewModel.singerTapped()
+    }
+
+    @objc private func musicTapped() {
+        homeViewModel.musicTapped()
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        homeViewModel.charts.value?.data?.count ?? 0
+        if showsCharts() {
+            return homeViewModel.charts.value?.data?.count ?? 0
+        } else if showsArtists() {
+            return homeViewModel.artists.value?.artists?.count ?? 0
+        } else {
+            return 0
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicCollectionViewCell.identifier, for: indexPath) as? MusicCollectionViewCell,
-              let charts = homeViewModel.charts.value, let music = charts.data, let url = music[indexPath.row].album?.cover_big else {
-            return UICollectionViewCell()
+        if showsCharts() {
+            return setupChartsCell(collectionView: collectionView, indexPath: indexPath)
+        } else if showsArtists() {
+            return setupArtistCell(collectionView: collectionView, indexPath: indexPath)
+        } else {
+            return MusicCollectionViewCell()
         }
-        cell.setup(url: url)
-        return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -61,11 +113,38 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let charts = homeViewModel.charts.value,
-              let music = charts.data,
-              let url = music[indexPath.row].preview else { return }
-        startAudio(url: url)
+        if showsCharts() {
+            guard let charts = homeViewModel.charts.value,
+                  let music = charts.data,
+                  let url = music[indexPath.row].preview else { return }
+            startAudio(url: url)
+        }
+    }
 
+    private func showsCharts() -> Bool {
+        homeViewModel.showsCharts.value
+    }
+
+    private func showsArtists() -> Bool {
+        homeViewModel.showsArtists.value
+    }
+
+    private func setupChartsCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicCollectionViewCell.identifier, for: indexPath) as? MusicCollectionViewCell,
+              let charts = homeViewModel.charts.value, let music = charts.data, let url = music[indexPath.row].album?.cover_big else {
+            return UICollectionViewCell()
+        }
+        cell.setup(url: url)
+        return cell
+    }
+
+    private func setupArtistCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicCollectionViewCell.identifier, for: indexPath) as? MusicCollectionViewCell,
+              let artist = homeViewModel.artists.value?.artists, let url = artist[0].picture_big else {
+            return UICollectionViewCell()
+        }
+        cell.setup(url: url)
+        return cell
     }
 }
 
