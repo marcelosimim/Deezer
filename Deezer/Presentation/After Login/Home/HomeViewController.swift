@@ -12,8 +12,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
 
     private let homeView = HomeView.init()
     private let homeViewModel = AppContainer.shared.resolve(HomeViewModel.self)!
-    var currentUser: User?
-    var player: AVPlayer?
+    private var player: AVPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +52,14 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
             self.homeView.singerButton.setup(checked: !checked)
             self.homeView.musicButton.setup(checked: checked)
         }
+        homeViewModel.currentUser.bindWithoutFire { user in
+            DispatchQueue.main.async {
+                self.homeView.name = user.fullName
+                self.homeView.setupTexts()
+            }
+        }
         homeViewModel.getCharts()
+        homeViewModel.getUserData()
     }
 
     private func setTextField() {
@@ -85,15 +91,10 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if showsCharts() {
-            return homeViewModel.charts.value?.data?.count ?? 0
-        } else if showsArtists() {
-            return homeViewModel.artists.value?.artists?.count ?? 0
-        } else if showsMusics() {
-            return homeViewModel.musics.value?.data?.count ?? 0
-        } else {
-            return 0
-        }
+        if showsCharts() { return homeViewModel.chartsSize }
+        else if showsArtists() { return homeViewModel.artistsSize }
+        else if showsMusics() { return homeViewModel.musics.value?.data?.count ?? 0 }
+        else { return 0 }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -104,7 +105,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if showsMusics() {
             return setupMusicCell(collectionView: collectionView, indexPath: indexPath)
         } else {
-            return MusicCollectionViewCell()
+            return setupErrorCell(collectionView: collectionView, indexPath: indexPath)
         }
     }
 
@@ -168,10 +169,17 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.setup(url: url)
         return cell
     }
+
+    private func setupErrorCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicCollectionViewCell.identifier, for: indexPath) as? MusicCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.setup(image: .happyMusic)
+        return cell
+    }
 }
 
 extension HomeViewController {
-
     private func startAudio(url: String) {
         NotificationCenter.default.addObserver(self, selector: #selector(audioDidEnded), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
             let sound = URL.init(string: url)

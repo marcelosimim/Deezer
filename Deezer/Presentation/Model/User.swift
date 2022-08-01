@@ -8,10 +8,15 @@
 import Foundation
 
 struct User {
+    var fullName: String?
+    var email: String?
+    var perfilImage: Data?
 
-    let fullName: String?
-    let email: String?
-    let perfilImage: Data?
+    init(fullName: String? = "", email: String? = "", perfilImage: Data? = nil) {
+        self.fullName = fullName
+        self.email = email
+        self.perfilImage = perfilImage
+    }
 
     func toUserModel() -> UserModel {
         UserModelBuilder()

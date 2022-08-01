@@ -28,6 +28,8 @@
 		A34BBA7028971E0300C40ECD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA6F28971E0300C40ECD /* Album.swift */; };
 		A34BBA7228971E1D00C40ECD /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA7128971E1D00C40ECD /* Artist.swift */; };
 		A34BBA742897201700C40ECD /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA732897201700C40ECD /* Charts.swift */; };
+		A34BBA762898052600C40ECD /* FirebaseFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA752898052600C40ECD /* FirebaseFirestoreRepository.swift */; };
+		A34BBA782898054B00C40ECD /* DefaultFirebaseFirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34BBA772898054B00C40ECD /* DefaultFirebaseFirestoreRepository.swift */; };
 		A372CB972896C64900430A03 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB962896C64900430A03 /* LoginUseCase.swift */; };
 		A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */; };
 		A372CB9B2896C85E00430A03 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372CB9A2896C85E00430A03 /* LoginViewModel.swift */; };
@@ -116,6 +118,8 @@
 		A34BBA6F28971E0300C40ECD /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A34BBA7128971E1D00C40ECD /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		A34BBA732897201700C40ECD /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
+		A34BBA752898052600C40ECD /* FirebaseFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreRepository.swift; sourceTree = "<group>"; };
+		A34BBA772898054B00C40ECD /* DefaultFirebaseFirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFirebaseFirestoreRepository.swift; sourceTree = "<group>"; };
 		A372CB962896C64900430A03 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB982896C67700430A03 /* DefaultLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginUseCase.swift; sourceTree = "<group>"; };
 		A372CB9A2896C85E00430A03 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 			children = (
 				A37C35FC2895DBB300F188BA /* FirebaseAuthRepository.swift */,
 				A34BBA562896FEAE00C40ECD /* DeezerAPIRepository.swift */,
+				A34BBA752898052600C40ECD /* FirebaseFirestoreRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			children = (
 				A37C36052895DC9400F188BA /* DefaultFirebaseAuthRepository.swift */,
 				A34BBA582896FED700C40ECD /* DefaultDeezerAPIRepository.swift */,
+				A34BBA772898054B00C40ECD /* DefaultFirebaseFirestoreRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -835,6 +841,7 @@
 				A37C36002895DC0100F188BA /* UserModel.swift in Sources */,
 				A37C360F2895DDA800F188BA /* DefaultRegisterUseCase.swift in Sources */,
 				A34BBA552896F6D900C40ECD /* HomeViewModel.swift in Sources */,
+				A34BBA762898052600C40ECD /* FirebaseFirestoreRepository.swift in Sources */,
 				A3C571B42895B65700BFEB17 /* Stylable.swift in Sources */,
 				A34BBA532896F01500C40ECD /* MusicCollectionViewCell.swift in Sources */,
 				A34BBA592896FED700C40ECD /* DefaultDeezerAPIRepository.swift in Sources */,
@@ -858,6 +865,7 @@
 				A37C36032895DC3000F188BA /* UserModelBuilder.swift in Sources */,
 				A3C571BF2895BCD800BFEB17 /* SecondaryButton.swift in Sources */,
 				A34BBA6C28971DC800C40ECD /* Music.swift in Sources */,
+				A34BBA782898054B00C40ECD /* DefaultFirebaseFirestoreRepository.swift in Sources */,
 				A34BBA5B2896FF9F00C40ECD /* MusicModel.swift in Sources */,
 				A372CB992896C67700430A03 /* DefaultLoginUseCase.swift in Sources */,
 				A34BBA65289703DE00C40ECD /* AlbumModelBuilder.swift in Sources */,

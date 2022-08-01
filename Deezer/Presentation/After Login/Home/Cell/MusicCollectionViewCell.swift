@@ -22,7 +22,7 @@ class MusicCollectionViewCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView.frame = contentView.bounds
+        setupConstraints()
     }
 
     override func prepareForReuse() {
@@ -33,14 +33,32 @@ class MusicCollectionViewCell: UICollectionViewCell {
     func setup(url: String) {
         let url = URL(string: url)!
         downloadImage(from: url)
+        setupImages()
+    }
+
+    func setup(image: UIImage) {
+        imageView.image = image
+        setupImages()
+    }
+
+    private func setupConstraints() {
+        imageView.heightTo(Dimen.cellSize)
+        imageView.widthTo(Dimen.cellSize)
+        imageView.topToTop(of: contentView)
+        imageView.leadingToLeading(of: contentView)
+        imageView.trailingToTrailing(of: contentView)
+        imageView.bottomToBottom(of: contentView)
+    }
+}
+
+extension MusicCollectionViewCell: Stylable {
+    func setupImages() {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.backgroundColor = .black
         imageView.layer.cornerRadius = 5
     }
-}
 
-extension MusicCollectionViewCell: Stylable {
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }

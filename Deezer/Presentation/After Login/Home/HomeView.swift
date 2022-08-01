@@ -10,6 +10,7 @@ import UIKit
 class HomeView: UIView {
 
     let welcomeText = UILabel()
+    var name: String?
     let profilePicture = UIImageView()
     let searchField: InputTextField = {
         let textfield = InputTextField()
@@ -69,7 +70,7 @@ extension HomeView: Stylable {
     }
 
     func setupTexts() {
-        welcomeText.text = "BEM VINDO FULANO!"
+        welcomeText.text = "BEM VIND@ \(name?.uppercased() ?? "")!"
         chartsTitle.text = "MAIS TOCADAS"
         singerButton.setup(status: .filled, title: "CANTOR")
         musicButton.setup(status: .empty, title: "MÚSICA")
