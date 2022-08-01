@@ -30,28 +30,28 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func setViewModelBinds() {
-        homeViewModel.charts.bindWithoutFire { musics in
+        homeViewModel.charts.bindWithoutFire { _ in
             DispatchQueue.main.async {
                 self.homeView.chartsCollectionView.reloadData()
             }
         }
-        homeViewModel.artists.bindWithoutFire { musics in
+        homeViewModel.artists.bindWithoutFire { _ in
             DispatchQueue.main.async {
                 self.homeView.chartsCollectionView.reloadData()
             }
         }
-        homeViewModel.showsCharts.bindWithoutFire { _ in
+        homeViewModel.musics.bindWithoutFire { _ in
             DispatchQueue.main.async {
                 self.homeView.chartsCollectionView.reloadData()
             }
         }
-        homeViewModel.isSingerButtonChecked.bindWithoutFire { _ in
-            self.homeView.singerButton.setup()
-            self.homeView.musicButton.setup()
+        homeViewModel.isSingerButtonChecked.bindWithoutFire { checked in
+            self.homeView.singerButton.setup(checked: checked)
+            self.homeView.musicButton.setup(checked: !checked)
         }
-        homeViewModel.isMusicButtonChecked.bindWithoutFire { _ in
-            self.homeView.singerButton.setup()
-            self.homeView.musicButton.setup()
+        homeViewModel.isMusicButtonChecked.bindWithoutFire { checked in
+            self.homeView.singerButton.setup(checked: !checked)
+            self.homeView.musicButton.setup(checked: checked)
         }
         homeViewModel.getCharts()
     }
@@ -89,6 +89,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return homeViewModel.charts.value?.data?.count ?? 0
         } else if showsArtists() {
             return homeViewModel.artists.value?.artists?.count ?? 0
+        } else if showsMusics() {
+            return homeViewModel.musics.value?.data?.count ?? 0
         } else {
             return 0
         }
@@ -99,6 +101,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return setupChartsCell(collectionView: collectionView, indexPath: indexPath)
         } else if showsArtists() {
             return setupArtistCell(collectionView: collectionView, indexPath: indexPath)
+        } else if showsMusics() {
+            return setupMusicCell(collectionView: collectionView, indexPath: indexPath)
         } else {
             return MusicCollectionViewCell()
         }
@@ -118,6 +122,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                   let music = charts.data,
                   let url = music[indexPath.row].preview else { return }
             startAudio(url: url)
+        } else if showsMusics() {
+            guard let musics = homeViewModel.musics.value,
+                  let music = musics.data,
+                  let url = music[indexPath.row].preview else { return }
+            startAudio(url: url)
         }
     }
 
@@ -127,6 +136,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
     private func showsArtists() -> Bool {
         homeViewModel.showsArtists.value
+    }
+
+    private func showsMusics() -> Bool {
+        homeViewModel.showsMusics.value
     }
 
     private func setupChartsCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
@@ -140,7 +153,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
     private func setupArtistCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicCollectionViewCell.identifier, for: indexPath) as? MusicCollectionViewCell,
-              let artist = homeViewModel.artists.value?.artists, let url = artist[0].picture_big else {
+              let artist = homeViewModel.artists.value?.artists, let url = artist[indexPath.row].picture_big else {
+            return UICollectionViewCell()
+        }
+        cell.setup(url: url)
+        return cell
+    }
+
+    private func setupMusicCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MusicCollectionViewCell.identifier, for: indexPath) as? MusicCollectionViewCell,
+              let musics = homeViewModel.musics.value, let music = musics.data, let url = music[indexPath.row].album?.cover_big else {
             return UICollectionViewCell()
         }
         cell.setup(url: url)

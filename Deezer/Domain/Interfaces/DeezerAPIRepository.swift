@@ -10,4 +10,5 @@ import Foundation
 protocol DeezerAPIRepository {
     func getCharts(completion: @escaping(ChartsModel) -> Void)
     func searchArtist(search: String, completion: @escaping(ArtistsModel) -> Void)
+    func searchMusic(search: String, completion: @escaping(ChartsModel) -> Void)
 }

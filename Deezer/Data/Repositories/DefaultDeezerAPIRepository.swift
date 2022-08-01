@@ -46,4 +46,22 @@ class DefaultDeezerAPIRepository: DeezerAPIRepository {
             }
         }.resume()
     }
+
+    func searchMusic(search: String, completion: @escaping(ChartsModel) -> Void) {
+        guard let sourceURL = URL(string: "\(baseURL)/search/track?q=\(search)") else { return }
+
+        URLSession.shared.dataTask(with: sourceURL) {(data, URLResponse, error) in
+            if let data = data {
+                do {
+                    let decoder = JSONDecoder()
+                    let results = try decoder.decode(ChartsModel.self, from: data)
+                    completion(results)
+                }
+                catch {
+                    print("error", error)
+                    return
+                }
+            }
+        }.resume()
+    }
 }

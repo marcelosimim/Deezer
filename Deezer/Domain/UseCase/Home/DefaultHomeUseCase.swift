@@ -21,4 +21,8 @@ class DefaultHomeUseCase: HomeUseCase {
     func searchArtist(search: String, completion: @escaping(ArtistsModel) -> Void) {
         deezerAPIRepository.searchArtist(search: search, completion: completion)
     }
+
+    func searchMusic(search: String, completion: @escaping(ChartsModel) -> Void) {
+        deezerAPIRepository.searchMusic(search: search, completion: completion)
+    }
 }

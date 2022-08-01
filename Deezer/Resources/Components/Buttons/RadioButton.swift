@@ -22,8 +22,8 @@ class RadioButton: UIButton {
         setupStyles()
     }
 
-    func setup() {
-        status = status == .filled ? .empty : .filled
+    func setup(checked: Bool) {
+        status = checked ? .filled : .empty
         setupImages()
     }
 }

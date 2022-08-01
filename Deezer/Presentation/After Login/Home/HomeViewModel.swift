@@ -12,6 +12,8 @@ protocol HomeViewModel {
     var showsCharts: Observable<Bool> { get }
     var artists: Observable<Artists?> { get }
     var showsArtists: Observable<Bool> { get }
+    var musics: Observable<Charts?> { get }
+    var showsMusics: Observable<Bool> { get }
     var isSingerButtonChecked: Observable<Bool> { get }
     var isMusicButtonChecked: Observable<Bool> { get }
 
@@ -27,6 +29,8 @@ class DefaultHomeViewModel: HomeViewModel {
     var showsCharts = Observable<Bool>(true)
     var artists = Observable<Artists?>(nil)
     var showsArtists = Observable<Bool>(false)
+    var musics = Observable<Charts?>(nil)
+    var showsMusics = Observable<Bool>(false)
     var isSingerButtonChecked = Observable<Bool>(true)
     var isMusicButtonChecked = Observable<Bool>(false)
 
@@ -37,8 +41,7 @@ class DefaultHomeViewModel: HomeViewModel {
     func getCharts() {
         homeUseCase.getCharts { musics in
             self.charts.value = Charts.fromChartsModel(charts: musics)
-            self.showsCharts.value = true
-            self.showsArtists.value = false
+            self.setShowsCharts()
         }
     }
 
@@ -46,23 +49,51 @@ class DefaultHomeViewModel: HomeViewModel {
         if text.isEmpty {
             getCharts()
         } else {
-            searchArtist(search: text)
+            isSingerButtonChecked.value ? searchArtist(search: text) : searchMusic(search: text)
         }
     }
 
     func singerTapped() {
-        isSingerButtonChecked.value.toggle()
+        isSingerButtonChecked.value = true
+        isMusicButtonChecked.value = false
+        setShowsArtists()
     }
 
     func musicTapped() {
-        isMusicButtonChecked.value.toggle()
+        isMusicButtonChecked.value = true
+        isSingerButtonChecked.value = false
+        setShowsMusics()
     }
 
     private func searchArtist(search: String) {
         homeUseCase.searchArtist(search: search) { artists in
             self.artists.value = Artists.fromArtistsModel(artistsModel: artists)
-            self.showsCharts.value = false
-            self.showsArtists.value = true
+            self.setShowsArtists()
         }
+    }
+
+    private func searchMusic(search: String) {
+        homeUseCase.searchMusic(search: search, completion: { musics in
+            self.musics.value = Charts.fromChartsModel(charts: musics)
+            self.setShowsMusics()
+        })
+    }
+
+    private func setShowsCharts() {
+        self.showsCharts.value = true
+        self.showsArtists.value = false
+        self.showsMusics.value = false
+    }
+
+    private func setShowsArtists() {
+        self.showsArtists.value = true
+        self.showsCharts.value = false
+        self.showsMusics.value = false
+    }
+
+    private func setShowsMusics() {
+        self.showsMusics.value = true
+        self.showsCharts.value = false
+        self.showsArtists.value = false
     }
 }
