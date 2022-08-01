@@ -16,4 +16,5 @@ class Dimen {
     public static let leadingMargin: CGFloat = 38*widthMultiplier
     public static let buttonHeight: CGFloat = 42*heightMultiplier
     public static let textFieldHeight: CGFloat = 42*heightMultiplier
+    public static let cellSize: CGFloat = 150*widthMultiplier
 }
